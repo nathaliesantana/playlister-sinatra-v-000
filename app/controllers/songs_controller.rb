@@ -1,7 +1,8 @@
 require 'rack-flash'
 class SongsController < ApplicationController
   enable :sessions
-    use Rack::Flash
+  use Rack::Flash
+
   get '/songs' do
     erb:'/songs/index'
   end
@@ -26,6 +27,11 @@ class SongsController < ApplicationController
 
     redirect"/songs/#{@song.slug}"
   end
+
+  get'/songs/:slug/edit' do
+
+  end
+  
 
 
 end
